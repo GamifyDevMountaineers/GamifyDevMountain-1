@@ -23,6 +23,7 @@ var isAuthed = function (req, res, next) {
 };
 
 var SESSION_SECRET = 'gweriwrb-erfawrg45-oasWsd';
+// var __dirname;
 
 /** Express */
 var app = express();
@@ -32,7 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 /** Connect to Front-End */
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + './../public'));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(session({ secret: SESSION_SECRET }));
@@ -89,7 +90,7 @@ app.put('/api/badges/:id', badgesCtrl.updateBadge);
 app.delete('/api/badges/:id', badgesCtrl.deleteBadge);
 
 /** Connections */
-var nodePort = 3000;
+var nodePort = 4000;
 app.listen(nodePort, function () {
     console.log('Running nodemon://localhost:' + nodePort);
 });
