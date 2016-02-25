@@ -1,0 +1,23 @@
+.navBar {
+    border: 1px solid rgba(250, 150, 0, 1);
+    background-color: rgba(200, 100, 0, 1);
+    margin-bottom: 15%; 
+    min-height: 650%; height: 100%;
+    min-width: 250px; width: 100%;
+    margin: auto;
+}
+
+.navBarSpace { font-size: 150%; color: white;
+    border: 1px solid rgba(250, 150, 0, 1);    
+    padding: 5%;
+}
+
+.navBarButton { color: white; font-size: 75%; text-align: center;
+    border: 1px solid rgba(150, 0, 150, 1);
+    background-color: rgba(100, 0, 100, 1);
+    margin: auto;
+    width: 100%;
+}
+
+.navBarAdmin { background-color: rgba(0, 200, 100, 1); }
+.navBarStudent { background-color: rgba(100, 100, 200, 1); }

@@ -1,0 +1,36 @@
+.header { color: white;
+    border: 1px solid rgba(250, 150, 0, 1);
+    background-color: rgba(200, 100, 0, 1);
+    display: inline-flex;  
+    min-height: 75px; max-height: 10%;
+    width: 100%;  
+}
+
+.headerSpace {
+    border: 1px solid rgba(250, 150, 0, 1);
+    background-color: rgba(200, 100, 0, 1);    
+    width: 100%;
+    display: inline-flex;
+}
+
+.headerLogo {
+    /*border: 1px solid rgba(250, 150, 0, 1);*/
+    background-color: rgba(100, 100, 100, 1);    
+    width: 75px;
+    float: left;
+}
+
+.headerUsername { text-align: right; font-size: 350%;
+    /*border: 1px solid rgba(250, 150, 0, 1);*/
+    background-color: rgba(200, 100, 0, 1);  
+    width: 100%;
+    padding: 0 2.5% 0 0;
+}
+
+.headerImage {
+    /*border: 1px solid rgba(250, 150, 0, 1);*/
+    background-color: rgba(100, 100, 100, 1);  
+    width: 75px;
+    float: right; 
+      
+}

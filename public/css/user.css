@@ -1,0 +1,17 @@
+.userState { color: black;
+    margin: auto; margin-top: .25%;
+    border: 1px solid rgba(125, 0, 100, 1);
+    background-color: rgba(100, 0, 75, 1);
+    display: inline-flex;
+    height: 88%;
+    width: 100%;
+}
+
+.userView { color: rgba(1000, 0, 1000, 1); text-align: center; 
+    border: 1px solid rgba(1000, 1000, 1000, 1);
+    background-color: rgba(125, 0, 100, 1);
+    margin-bottom: 15%; 
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}

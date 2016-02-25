@@ -1,0 +1,25 @@
+<div class="regState">
+
+    <form ng-submit="register()">
+        <input id="registrationInput" type="text" placeholder="Enter First Name" ng-model="users.firstName">
+        <p></p>
+        <input id="registrationInput" type="text" placeholder="Enter Last Name" ng-model="users.lastName">
+        <p></p>
+        <input id="registrationInput" type="text" placeholder="Create Username" ng-model="users.username" required>
+        <p></p>
+        <input id="registrationInput" type="text" placeholder="emailAddress@email.com" ng-model="users.email">
+        <p></p>
+        <input id="registrationInput" type="text" placeholder="Enter Cohort" ng-model="users.cohort">
+        <p></p>
+        <input id="registrationInput" type="text" placeholder="Student, Mentor, Brack?" ng-model="users.role">
+        <p></p>
+        
+        <div id="registrationSubmit">
+            <p>Password</p>
+            <input id="registrationInput" type="password" placeholder="Create Password" ng-model="user.password" required>
+            <br>
+            <button class="registrationSubmit" ng-click="toggle();" type="submit">Create Account</button>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,21 @@
+.registration { color: rgba(1000, 1000, 1000, 1); text-align: center; 
+    border: 1px solid rgba(250, 150, 0, 1);
+    background-color: rgba(200, 100, 0, 1);
+    margin: auto; margin-top: 7.5%;
+    width: 350px;
+    height: 450px;
+    position: fixed;
+}
+
+/*.registrationSpace {
+    border: 1px solid rgba(250, 150, 0, 1);
+    background-color: rgba(200, 100, 0, 1);    
+    height: 50%;
+}*/
+
+.registrationRef { color: white; text-decoration: none; font-size: 100%; }
+
+h { color: yellow;
+    border: 1px solid rgba(150, 150, 150, 1);
+    background-color: rgba(100, 100, 100, 1);    
+    }

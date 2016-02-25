@@ -1,0 +1,14 @@
+html { 
+border: 1px solid rgb(1000, 1000, 1000);
+height: 98%; 
+width: 98.75%; 
+padding: .5%; 
+}
+
+body { 
+/*border: 1px solid rgba(75, 75, 75, 1);*/
+background-color: rgb(50, 50, 50);
+margin: auto; 
+height: 100%;
+width: 100%;
+}
