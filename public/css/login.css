@@ -1,3 +1,22 @@
+.loginState {
+    margin: auto; margin-top: .25%;
+    border: 1px solid rgba(125, 0, 100, 1);
+    background-color: rgba(100, 0, 75, 1);
+    height: 98.75%;
+    width: 98.5%;
+}
+
+.loginSpace { text-align: center;
+    /*border: 1px solid rgb(500, 0, 500);*/
+    width: 100%;
+    display: inline-flex;
+}
+
+a {
+    /*border: 1px solid rgb(500, 0, 500);*/
+    width: 100%;
+}
+
 .login { color: rgba(1000, 1000, 1000, 1); text-align: center; 
     border: 1px solid rgba(250, 150, 0, 1);
     background-color: rgba(200, 100, 0, 1);

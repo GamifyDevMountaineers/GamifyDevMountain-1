@@ -5,7 +5,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var cors = require('cors');
 var passport = require('passport');
-var passportLocal = require('passport-local').Strategy;
+var local = require('passport-local');
 
 /* Controllers */
 var badgesCtrl = require('./controllers/badgesCtrl');
@@ -23,10 +23,12 @@ var isAuthed = function (req, res, next) {
 };
 
 var SESSION_SECRET = 'gweriwrb-erfawrg45-oasWsd';
-// var __dirname;
+var __dirname;
 
 /** Express */
 var app = express();
+
+require('./services/passport.js')(passport);
 
 /** Passport Application */
 app.use(passport.initialize());
@@ -34,27 +36,28 @@ app.use(passport.session());
 
 /** Connect to Front-End */
 app.use(express.static(__dirname + './../public'));
+app.use(session({ secret: SESSION_SECRET }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(session({ secret: SESSION_SECRET }));
 
 /** Services */
 require('./services/passport');
 
 /** Log In */
-app.post('/api/login', function (req, res, next) {
-    console.log('Running Function: login');
-    next();
-},
-    passport.authenticate('local'), function (req, res) {
-        res.send(req.user._id);
+app.post('/api/login',
+    passport.authenticate('local', {
+        failureRedirect: false
+    }), function (req, res) {
+        console.log("Not Happening");
+        res.send({Login: true});
         console.log('Function: authenticate');
-    });
+    }
+);
     
 /** Log Out */
-app.get('/api/logout', function (req, res, next) {
+app.get('/api/logout', function (req, res) {
     req.logout();
-    return res.redirect('/#/main');
+    return res.redirect('/#/login');
     console.log('Running Function: logout');
 });
 

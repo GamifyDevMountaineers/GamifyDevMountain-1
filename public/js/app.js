@@ -1,11 +1,12 @@
+var angular;
 angular.module("GamifyDevMountain", ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
 
-            .state('main', {
-                url: '/main',
-                templateUrl: 'html/states/mainState.html',
-                controller: 'mainCtrl',
+            .state('login', {
+                url: '/login',
+                templateUrl: 'html/states/loginState.html',
+                controller: 'loginCtrl',
                 // resolve: {
                 //     user: function (authSvc, $state) {
                 //         return authSvc.getCurrentUserObject().then(function (response) {
@@ -15,7 +16,7 @@ angular.module("GamifyDevMountain", ['ui.router'])
                 //             console.log(response);
                 //             return response.data;
                 //         })
-                //         console.log('Resolve in main');
+                //         console.log('Resolve in login');
                 //     }
                 // }
             })
@@ -32,5 +33,5 @@ angular.module("GamifyDevMountain", ['ui.router'])
                 controller: 'profileCtrl'
             })
 
-        $urlRouterProvider.otherwise('/main');
+        $urlRouterProvider.otherwise('/login');
     });

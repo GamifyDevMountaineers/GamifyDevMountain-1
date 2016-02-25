@@ -1,19 +1,16 @@
-<div class="mainState">
-
+<div class="loginState">
     <div class="login">
 
         <div class="loginSpace"></div>
         
         <div class="loginSpace">
-            <form ng-submit="login()">
-                <div class="loginMenu">
-                    What is your username ?
-                    <br>
+            <form ng-submit="login(user)">
+                <div class="loginMenu">                    
+                    <p>What is your username ?</p>
                     <input type="text" class="loginInput" placeholder="Username" ng-model="user.username">
-                    <br> What is your password ?
-                    <br>
+                    <p>What is your password ?</p>
                     <input type="password" class="loginInput" placeholder="Password" ng-model="user.password">
-                    <br>
+                    <p></p>
                     <button class="loginSubmit" ng-click="toggle();" type="submit">Log In</button>
                 </div>
             </form>
@@ -21,5 +18,4 @@
         </div>
 
     </div>
-
 </div>

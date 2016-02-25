@@ -8,13 +8,13 @@ angular.module('GamifyDevMountain')
             password: 'phillippuckett88'
         }
 
-        $scope.login = function (users) {
-            authSvc.login($scope.user).then(function () {
-                if (users.student) {
-                    
+        $scope.login = function (user) {
+            authSvc.login(user).then(function (user) {
+                console.log('Logged in as ', user);
+                if (user.Login === true) {
+                    console.log('Where we goin?');
+                    $state.go('profile');
                 }
-                $state.go('student');
-                
             }).catch(function (err) {
                 if (err.status === 401) {
                     alert('Invalid Login');

@@ -1,22 +1,27 @@
 angular.module('GamifyDevMountain')
     .service('authSvc', function ($state, $http) {
-        var auth = {};
-        var loggedIn = false;
-        var currentUserId;
+        this.auth = {};
+    
+    
         
         /** Get Current Users ID */
-        // this.getCurrentUser = function () {
-        //     return currentUserId;
-        //     console.log('Function: getCurrentUser');
-        // }; 
+        var currentUserId;
+        this.getCurrentUser = function () {
+            return currentUserId;
+            console.log('Function: getCurrentUser');
+        }; 
+
+
              
         /** Get Current User */
-        // this.getCurrentUserObject = function () {
-        //     return $http.get('/api/currentUser').then(function (currentUser) {
-        //         return currentUser;
-        //     })
-        //     console.log('Function: getCurrentUserObject');
-        // };
+        this.getCurrentUserObject = function () {
+            return $http.get('/api/currentUser').then(function (currentUser) {
+                return currentUser;
+            })
+            console.log('Function: getCurrentUserObject');
+        };
+  
+  
         
         /** Registration */
         this.register = function (user) {
@@ -26,26 +31,29 @@ angular.module('GamifyDevMountain')
                     loggedIn = true;
                     // notifyObserver();
                 }
-                $state.go('main');
+                $state.go('login');
                 return registeredUser.data;
             })
             console.log('Function: register');
         };    
+ 
+ 
         
         /** Log In */
+        var loggedIn = false;
         this.login = function (user) {
-            console.log('SENDING: ', user);
-            return $http.post('/api/login', user).then(function (loginData) {
-                /* check in authSvc */
-                currentUserId = loginData.data;
-                if (loginData) {
-                    loggedIn = true;
-                    // notifyObserver();
-                }
-                $state.go('student');
+            console.log('Sending ', user);
+            return $http({
+                method: 'POST',
+                url: '/api/login',
+                data: user
+            }).then(function (loginData) {
+                console.log('Got Info Back');
+                return loginData.data;
             })
-            console.log('Function: login');
         };
+  
+  
         
         /** Log Out */
         this.logout = function () {
@@ -54,6 +62,8 @@ angular.module('GamifyDevMountain')
             });
             console.log('Function: logout');
         };
+   
+   
         
         /** Toggle */
         // this.isLoggedIn = function () {
