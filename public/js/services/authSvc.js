@@ -1,8 +1,8 @@
 angular.module('GamifyDevMountain')
     .service('authSvc', function ($state, $http) {
-        this.auth = {};
+        var auth = {};
            
-        /** Get Current Users ID */
+        /** Get Current Users Id */
         var currentUserId;
         this.getCurrentUser = function () {
             return currentUserId;
@@ -39,7 +39,12 @@ angular.module('GamifyDevMountain')
                 url: '/api/login',
                 data: user
             }).then(function (loginData) {
-                // console.log('Service: Successful Log In');
+                
+                /** Acknowledgement of Users Data Population */
+                currentUserId = loginData.data;
+                if (loginData) {
+                    loggedIn = true;
+                }
                 return loginData.data;
             })
         };

@@ -1,21 +1,28 @@
 <div class="loginState">
-    <div class="login">
+    <div class="loginSpace"></div>
 
+    <div class="loginSpace">
         <div class="loginSpace"></div>
-        
+
+
         <div class="loginSpace">
-            <form ng-submit="login(user)">
-                <div class="loginMenu">                    
-                    <p>What is your username ?</p>
-                    <input type="text" class="loginInput" placeholder="Username" ng-model="user.username">
-                    <p>What is your password ?</p>
-                    <input type="password" class="loginInput" placeholder="Password" ng-model="user.password">
-                    <p></p>
-                    <button class="loginSubmit" ng-click="toggle();" type="submit">Log In</button>
-                </div>
-            </form>
-            <p>Don't have a log in? Sign up <a href="/#/registration">here</a>!</p>
+            <div class="login">
+                    <div class="loginImage"></div>
+                    <form ng-submit="login(user)">
+                        <p></p>
+                        <input type="text" class="loginInput" placeholder="What is your username ?" ng-model="user.username">
+                        <p></p>
+                        <input type="password" class="loginInput" placeholder="What is your password ?" ng-model="user.password">
+                        <p></p>
+                        <button class="loginSubmit" type="submit">Log In</button>
+                        <p>Don't have a log in? Sign up <a href="/#/registration">here</a>!</p>
+                    </form>
+            </div>
         </div>
 
+
+        <div class="loginSpace"></div>
     </div>
+
+    <div class="loginSpace"></div>
 </div>
