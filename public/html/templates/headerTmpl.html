@@ -1,15 +1,27 @@
 <div class="headerTmpl">
 
+    <!--1st Quarter-->
     <div class="headerSpace">
-        <div class="logo">
-            <a href="/#/login">LOGO{{logo}}</a>
+        <div class="headerSpace">
+            <div class="logo">
+                <a href="/#/login">∆∆</a>
+            </div>
         </div>
         <div class="headerSpace"></div>
     </div>
+
+    <!--2nd Quarter-->
+    <div class="headerSpace"></div>
+
+    <!--3rd Quarter-->
+    <div class="headerSpace"></div>
+
+    <!--4th Qurter-->
     <div class="headerSpace">
-        <div class="headerSpace"></div>
-        <div class="userSpace">USERNAME{{user.name}}</div>
-        <div class="userImage">IMG{{user.image}}</div>
+        <div class="userSpace">{{user.username}}</div>
+        <div class="userImage">{{user.userImage}}
+            <a href="/api/logout">LOGOUT</a>
+        </div>
     </div>
 
 </div>

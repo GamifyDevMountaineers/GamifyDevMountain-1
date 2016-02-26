@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 var passport = require('passport');
 var local = require('passport-local');
+var key = require('./services/cookey.js');
 
 /* Controllers */
 var badgesCtrl = require('./controllers/badgesCtrl');
@@ -22,7 +23,6 @@ var isAuthed = function (req, res, next) {
     console.log('Function: isAuthed');
 };
 
-var SESSION_SECRET = 'gweriwrb-erfawrg45-oasWsd';
 var __dirname;
 
 /** Express */
@@ -30,13 +30,19 @@ var app = express();
 
 require('./services/passport.js')(passport);
 
+/** Storage Cookie */
+app.use(session({
+    secret: key, // Remove from Final Project
+    resave: true,
+    saveUninitialized: true
+}));
+
 /** Passport Application */
 app.use(passport.initialize());
 app.use(passport.session());
 
 /** Connect to Front-End */
 app.use(express.static(__dirname + './../public'));
-app.use(session({ secret: SESSION_SECRET }));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -97,8 +103,6 @@ var nodePort = 4000;
 app.listen(nodePort, function () {
     console.log('Running nodemon://localhost:' + nodePort);
 });
-
-SESSION_SECRET: 'gweriwrb-erfawrg45-oasWsd';
 
 var mongoURI = 'mongodb://localhost:27017/GamifyDevMountain';
 mongoose.connect(mongoURI);

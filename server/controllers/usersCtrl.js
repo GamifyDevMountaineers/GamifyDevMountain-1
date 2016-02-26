@@ -29,9 +29,8 @@ module.exports = {
     /** R */
     getCurrentUser: function (req, res) {
         if (!req.user) res.status(401).send('Current User Undefined');
-        req.user.password = null;
         res.status(200).json(req.user);
-    },
+    },      
         
     /** U */
     updateUser: function (req, res, next) {

@@ -8,15 +8,21 @@
         <div class="loginSpace">
             <div class="login">
                     <div class="loginImage"></div>
+                    <h2>Login</h2>
+                    <p><a href="/#/registration">Need an account?</a></p>
                     <form ng-submit="login(user)">
                         <p></p>
                         <input type="text" class="loginInput" placeholder="What is your username ?" ng-model="user.username">
                         <p></p>
                         <input type="password" class="loginInput" placeholder="What is your password ?" ng-model="user.password">
                         <p></p>
-                        <button class="loginSubmit" type="submit">Log In</button>
-                        <p>Don't have a log in? Sign up <a href="/#/registration">here</a>!</p>
+                        <button class="loginSubmit" type="submit">Submit</button>
                     </form>
+                    <p>Forgot password?</p>
+                    <p></p>
+                    <button class="loginSubmit" type="submit">O| Login with GitHub</button>
+                    <p></p>
+                    <button class="loginSubmit" type="submit">In| Login with LinkedIn</button>
             </div>
         </div>
 
