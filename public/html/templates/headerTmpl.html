@@ -1,12 +1,15 @@
-<div class="header">
+<div class="headerTmpl">
 
-    <div class="logoSpace"><a href="/#/login">L{{logo}}G</a></div>
-
-    <div class="headerSpace"></div>
-
-
-        <div class="userSpace">{{user.name}}</div>
-        <div class="userImage">U{{user.image}}I</div>
-
+    <div class="headerSpace">
+        <div class="logo">
+            <a href="/#/login">LOGO{{logo}}</a>
+        </div>
+        <div class="headerSpace"></div>
+    </div>
+    <div class="headerSpace">
+        <div class="headerSpace"></div>
+        <div class="userSpace">USERNAME{{user.name}}</div>
+        <div class="userImage">IMG{{user.image}}</div>
+    </div>
 
 </div>

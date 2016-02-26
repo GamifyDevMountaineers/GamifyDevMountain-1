@@ -1,37 +1,37 @@
-a { color: white; }
-.header { color: white;
-    /*border: 1px solid rgb(150, 150, 0);*/
-    background-color: rgb(200, 200, 0);  
+p { border: 1px solid rgb(125, 125, 125); width: 100%; color: rgb(250, 250, 250); text-decoration: none; }
+a { border: 1px solid rgb(125, 125, 0); width: 100%; color: rgb(250, 250, 0); text-decoration: none; }
+
+.headerTmpl { color: white;
+    border: 1px solid rgb(100, 100, 0);
+    background-color: rgb(25, 25, 0);  
     min-height: 70px; max-height: 10%;
     width: 100.2%;  
     display: inline-flex;
 }
 
 .headerSpace {
-    /*border: 1px solid rgb(75, 75, 75);*/
-    background-color: rgb(65, 65, 65);    
+    border: 1px solid rgb(100, 100, 0);
+    background-color: rgb(25, 25, 0);    
     width: 100%;
     display: inline-flex;
 }
 
-.logoSpace { text-align: right;
-    border-right: 1px solid rgb(75, 75, 75);
-    background-color: rgb(65, 65, 65);    
+.logo { text-align: right;
+    border-right: 1px solid rgb(0, 100, 0);
+    /*background-color: rgb(0, 50, 0);*/
     width: 25%;
     float: left;
 }
 
 .userSpace { text-align: right;
-    /*border-right: 1px solid rgb(75, 75, 75);*/
-    background-color: rgb(65, 65, 65);  
-    width: 30%;
+    border-right: 1px solid rgb(100, 0, 0);
+    /*background-color: rgb(50, 0, 0);*/
+    width: 75%;
     padding: 0 2.5% 0 0;
 }
 
 .userImage {
-    /*border-right: 1px solid rgb(75, 75, 75);*/
-    background-color: rgb(150, 150, 1000);    
-    width: 15%;
-    float: right; 
-      
+    border-right: 1px solid rgb(0, 0, 100);  
+    /*background-color: rgb(0, 0, 50);*/
+    width: 25%;      
 }
