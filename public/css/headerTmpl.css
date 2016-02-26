@@ -1,0 +1,37 @@
+a { color: white; }
+.header { color: white;
+    /*border: 1px solid rgb(150, 150, 0);*/
+    background-color: rgb(200, 200, 0);  
+    min-height: 70px; max-height: 10%;
+    width: 100.05%;  
+    display: inline-flex;
+}
+
+.headerSpace {
+    /*border: 1px solid rgb(75, 75, 75);*/
+    background-color: rgb(65, 65, 65);    
+    width: 100%;
+    display: inline-flex;
+}
+
+.logoSpace { text-align: right;
+    border-right: 1px solid rgb(75, 75, 75);
+    background-color: rgb(65, 65, 65);    
+    width: 25%;
+    float: left;
+}
+
+.userSpace { text-align: right;
+    /*border-right: 1px solid rgb(75, 75, 75);*/
+    background-color: rgb(65, 65, 65);  
+    width: 30%;
+    padding: 0 2.5% 0 0;
+}
+
+.userImage {
+    /*border-right: 1px solid rgb(75, 75, 75);*/
+    background-color: rgb(150, 150, 1000);    
+    width: 15%;
+    float: right; 
+      
+}

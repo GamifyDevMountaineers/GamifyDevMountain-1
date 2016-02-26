@@ -1,9 +1,9 @@
 .loginState {
-    margin: auto; margin-top: .25%;
-    border: 1px solid rgba(125, 0, 100, 1);
-    background-color: rgba(100, 0, 75, 1);
-    height: 98.75%;
-    width: 98.5%;
+    margin: auto; margin-top: 0;
+    /*border: 1px solid rgba(125, 0, 100, 1);*/
+    background-color: rgba(150, 150, 150, 1);
+    height: 91%;
+    width: 100%;
 }
 
 .loginSpace { text-align: center;
